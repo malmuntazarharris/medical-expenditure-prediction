@@ -9,9 +9,6 @@ import pandas as pd
 import matplotlib.pyplot as plt 
 import numpy as np 
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn.model_selection import cross_val_score
-from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import GridSearchCV
 from sklearn.ensemble import GradientBoostingRegressor
 
@@ -25,18 +22,6 @@ y = df.total_expenditure.values
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1)
 
-import pandas as pd 
-import matplotlib.pyplot as plt 
-import numpy as np 
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn.model_selection import cross_val_score
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.model_selection import GridSearchCV
-from sklearn.ensemble import GradientBoostingRegressor
-
-df = pd.read_csv('C:/Users/Malcolm/Documents/MedicalExpenditure/data/meps_data_2019_new_feats.csv')
-
 # preprocessing
 
 # train test split
@@ -44,15 +29,21 @@ X = df.drop('total_expenditure', axis =1)
 y = df.total_expenditure.values
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1)
+
+xgb = GradientBoostingRegressor()
+xgb.fit(X_train, y_train)
 
 parameters = {
     "n_estimators": list(range(60, 71, 5)) + list(range(71, 81)) + list(range(85, 106, 5)),
     "max_depth": list(range(2, 8)),
     "min_samples_split": list(range(2, 8)),
     "min_samples_leaf": list(range(2, 8)),
-    "random_state": [123]
-}
-reg = GridSearchCV(xgb, parameters, n_jobs = -1)
-
-%%time
+} 
+reg = GridSearchCV(xgb, parameters, scoring='neg_mean_absolute_error', n_jobs = 3, verbose=2, cv=3)
 reg.fit(X_train, y_train)
+
+reg.best_score_  # -4094.3398028604183
+reg.best_params_ # {'max_depth': 6,
+#  'min_samples_leaf': 7,
+#  'min_samples_split': 2,
+#  'n_estimators': 72}
