@@ -6,8 +6,6 @@ Created on Tue Nov 30 11:04:35 2021
 """
 
 import pandas as pd 
-import matplotlib.pyplot as plt 
-import numpy as np 
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import GridSearchCV
 from sklearn.ensemble import GradientBoostingRegressor
