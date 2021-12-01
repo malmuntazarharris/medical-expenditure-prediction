@@ -11,6 +11,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import GridSearchCV
 from sklearn.ensemble import GradientBoostingRegressor
+import pickle
 
 df = pd.read_csv('C:/Users/Malcolm/Documents/MedicalExpenditure/data/meps_data_2019_new_feats.csv')
 
@@ -47,3 +48,5 @@ reg.best_params_ # {'max_depth': 6,
 #  'min_samples_leaf': 7,
 #  'min_samples_split': 2,
 #  'n_estimators': 72}
+
+pickle.dump(reg, open("MEPS_xgb_model_non_processed_v1.pickle", "wb"))
