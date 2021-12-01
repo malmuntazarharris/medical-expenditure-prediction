@@ -15,15 +15,11 @@ import pickle
 
 df = pd.read_csv('C:/Users/Malcolm/Documents/MedicalExpenditure/data/meps_data_2019_new_feats.csv')
 
-# preprocessing
-
 # train test split
 X = df.drop('total_expenditure', axis =1)
 y = df.total_expenditure.values
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1)
-
-# preprocessing
 
 # train test split
 X = df.drop('total_expenditure', axis =1)
