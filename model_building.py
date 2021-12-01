@@ -35,9 +35,9 @@ rf = RandomForestRegressor()
 rf.fit(X_train, y_train)
 print("The average MAE for Random Forest is " + str(np.mean(cross_val_score(rf,X_train,y_train,scoring = 'neg_mean_absolute_error', cv= 3))))
 
-# xgboost
-xgb = GradientBoostingRegressor()
-xgb.fit(X_train, y_train)
+# gradient boosting
+gb = GradientBoostingRegressor()
+gb.fit(X_train, y_train)
 print("The average MAE for XGBoost is " + str(np.mean(cross_val_score(xgb,X_train,y_train,scoring = 'neg_mean_absolute_error', cv= 3))))
 
 # tune models
@@ -48,9 +48,8 @@ parameters = {
     "min_samples_leaf": list(range(2, 8)),
     "random_state": [123]
 }
-reg = GridSearchCV(xgb, parameters, n_jobs = -1)
+reg = GridSearchCV(gb, parameters, n_jobs = -1)
 
-%%time
 reg.fit(X_train, y_train)
 
 # parameters = {'n_estimators':range(10,300,10), 'criterion':('mse','mae'), 'max_features':('auto','sqrt','log2')} # This tunes the random forest model with different parameters and finds the ideal amount of estimators

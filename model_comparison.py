@@ -33,9 +33,9 @@ rf = RandomForestRegressor()
 rf.fit(X_train, y_train)
 print("The average MAE for Random Forest is " + str(np.mean(cross_val_score(rf,X_train,y_train,scoring = 'neg_mean_absolute_error', cv= 3))))
 
-# xgboost
-xgb = GradientBoostingRegressor()
-xgb.fit(X_train, y_train)
-print("The average MAE for XGBoost is " + str(np.mean(cross_val_score(xgb,X_train,y_train,scoring = 'neg_mean_absolute_error', cv= 3))))
+# gradient boosting
+gb = GradientBoostingRegressor()
+gb.fit(X_train, y_train)
+print("The average MAE for XGBoost is " + str(np.mean(cross_val_score(gb,X_train,y_train,scoring = 'neg_mean_absolute_error', cv= 3))))
 
 
