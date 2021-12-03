@@ -47,6 +47,70 @@
         <label for="nevermarried">Never Married</label>
         <input type="radio" id="under16" name="marriagestatus" value="6">
         <label for="under16">N/A - Under 16</label>
+      <p>Are you in the military full-time?</p>
+        <input type="radio" id="milyes" name="military" value="1">
+        <label for="milyes">Yes</label>
+        <input type="radio" id="milno" name="military" value="2">
+        <label for="milno">No</label>
+      <p>What is your employment status?</p>
+        <input type="radio" id="employyes" name="employment" value="1">
+        <label for="milyes">Yes</label>
+        <input type="radio" id="employno" name="employment" value="34">
+        <label for="milno">No</label>
+      <p>What is your highest level of education?</p>
+        <select id="educationstatus" name="educationstatus">
+            <option value="1" selected>No Degree</option>
+            <option value="2">GED</option>
+            <option value="3">High School Diploma</option>
+            <option value="4">Bachelor's Degree</option>
+            <option value="5">Master's Degree</option>
+            <option value="6">Doctorate Degree</option>
+            <option value="7">Other Degree</option>
+            <option value="8">Under 16 - NA</option>
+        </select>
+      <p>What is your insurance status?</p>
+        <select id="insurancestatus" name="insurancestatus">
+          <option value="1" selected>Under 65 - Any Private Insurance</option>
+          <option value="2">Under 65 - Public Insurance</option>
+          <option value="3">Under 65 - Uninsured/option>
+          <option value="4">Over 65 - Medicare Only</option>
+          <option value="5">Over 65 - Medicare and Private</option>
+          <option value="6">Over 65 - Medicare and Other Public</option>
+          <option value="7">Over 65 - Uninsured</option>
+          <option value="8">Over 65 - No Medicare and Any Public/Private</option>
+        </select>
+      <p>How many of the following conditions have you been diagnosed with?</p>
+      <ul>
+        <li>High Blood Pressure</li>
+        <li>Coronary Heart Disease</li>
+        <li>Angina</li>
+        <li>Heart Attack</li>
+        <li>Stroke</li>
+        <li>Emphysema</li>
+        <li>Chronic Bronchitis</li>
+        <li>High Cholesterol</li>
+        <li>Cancer</li>
+        <li>Diabetes</li>
+        <li>Joint Pain</li>
+        <li>Arthritis</li>
+        <li>Asthma</li>
+        <li>ADHD/ADD</li>
+      </ul>
+      <input type="number" id="numdiagnoses" name="numdiagnoses" min="0" max="14"><br>
+      <p>How many of these physical limitations do you have?</p>
+      <ul>
+        <li>Difficulty lifting 10 lbs</li>
+        <li>Difficulty walking 10 steps</li>
+        <li>Difficulty walking 3 blocks</li>
+        <li>Difficulty walking a mile</li>
+        <li>Difficulty standing 20 minutes</li>
+        <li>Difficulty bending or stooping down</li>
+        <li>Difficulty reaching over head</li>
+        <li>Difficulty grasping with fingers</li>
+      </ul>
+      <input type="number" id="numdiff" name="numdiff" min="0" max="8"><br>
+      <p>How many health-related visits have you had? This includes: ER visits, office doctor visits, 
+        dental visits, home health care days, surgery visits, or any kind of health-related visit</p>
     </form>
 </body>
 </html>
