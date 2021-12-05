@@ -3,7 +3,7 @@ Resources:
 ML Webapp example: https://github.com/krishnaik06/Deployment-flask/blob/master/app.py
 """
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template
 import numpy as np
 import pickle
 
