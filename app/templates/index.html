@@ -9,7 +9,7 @@
     <h1>Yearly Health Spending Prediction</h1>
 
     <!-- Create form for ML Model -->
-    <form id="form">
+    <form id="form" action="{{ url_for('predict')}}" method="post">
 
       <div class="form-control">
         <label for="age"><b>Age:</b></label>
@@ -98,10 +98,10 @@
 
       <div class="form-control">
         <label><b>What is your employment status?</b></label>
-        <label for="milyes">Yes
+        <label for="employyes">Yes
           <input type="radio" id="employyes" name="employment" value="1">
         </label>
-        <label for="milno">No
+        <label for="employno">No
           <input type="radio" id="employno" name="employment" value="34">
         </label>
       </div>
@@ -125,7 +125,7 @@
         <select id="insurancestatus" name="insurancestatus">
           <option value="1" selected>Under 65 - Any Private Insurance</option>
           <option value="2">Under 65 - Public Insurance</option>
-          <option value="3">Under 65 - Uninsured/option>
+          <option value="3">Under 65 - Uninsured</option>
           <option value="4">Over 65 - Medicare Only</option>
           <option value="5">Over 65 - Medicare and Private</option>
           <option value="6">Over 65 - Medicare and Other Public</option>
@@ -179,7 +179,9 @@
       <button type="submit" value="submit">
         Submit
     </button>
-
     </form>
+  <br>
+   <br>
+   {{ prediction_text }}
 </body>
 </html>

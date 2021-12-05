@@ -3,7 +3,7 @@ Resources:
 ML Webapp example: https://github.com/krishnaik06/Deployment-flask/blob/master/app.py
 """
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import numpy as np
 import pickle
 
@@ -14,8 +14,13 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-# @app.route('/predict',methods=['POST'])
-# def predict():
+@app.route('/predict',methods=['POST'])
+def predict():
+# test predict
+
+    features = list(request.form.values())
+
+    return render_template('index.html', prediction_text=str(features))
 #     '''
 #     Renders results in html
 #     '''
