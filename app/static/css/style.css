@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+
 body {
-	background-color: #0578c4da;
-	font-family: Verdana;
+	background-color: #9b59b6;
+	font-family: 'Open Sans', sans-serif;
 	text-align: center;
 }
 
@@ -40,13 +42,14 @@ form {
 }
 
 button {
-	background-color: #0578c4da;
-	border: 1px solid #777;
-	border-radius: 2px;
-	font-family: inherit;
-	font-size: 21px;
+	background-color: #8e44ad;
+	border: 2px solid #8e44ad;
+	border-radius: 4px;
+	color: #fff;
 	display: block;
+	font-family: inherit;
+	font-size: 16px;
+	padding: 10px;
+	margin-top: 20px;
 	width: 100%;
-	margin-top: 50px;
-	margin-bottom: 20px;
 }

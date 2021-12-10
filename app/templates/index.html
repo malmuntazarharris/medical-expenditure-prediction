@@ -6,10 +6,11 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
 </head>
 <body>
-    <h1>Yearly Health Spending Prediction</h1>
-
     <!-- Create form for ML Model -->
     <form id="form" action="{{ url_for('predict')}}" method="post">
+      <div class="header">
+        <h2>Yearly Health Spending Predictionn</h2>
+      </div>
 
       <div class="form-control">
         <label for="age"><b>Age:</b></label>
@@ -27,7 +28,7 @@
       </div>
 
       <div class="form-control">
-        <label><b>Ethinicity</b></label>
+        <label><b>Ethinicity:</b></label>
         <label for="Hispanic">Hispanic
           <input type="radio" id="hispanic" name="ethinicity" value="1">
         </label>
@@ -99,10 +100,12 @@
       
       <div class="form-control">
         <label><b>Are you in the military full-time?</b></label>
-        <input type="radio" id="milyes" name="military" value="1">
-        <label for="milyes">Yes</label>
-        <input type="radio" id="milno" name="military" value="2">
-        <label for="milno">No</label>
+        <label for="milyes">Yes
+          <input type="radio" id="milyes" name="military" value="1">
+        </label>
+        <label for="milno">No
+          <input type="radio" id="milno" name="military" value="2">
+        </label>
       </div>
 
       <div class="form-control">
@@ -185,7 +188,7 @@
       </div>
     
       <div class="form-control">
-        <label><b>How many health-related visits have you had?</b> This includes: ER visits, office doctor visits, 
+        <label><b>How many health-related visits have you had?</b> <br>This includes: ER visits, office doctor visits, 
           dental visits, home health care days, surgery visits, or any kind of health-related visits.</label>
         <input type="number" id="numdiff" name="numdiff" min="0" max="99">
       </div>
