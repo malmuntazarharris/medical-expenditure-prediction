@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
 
 body {
-	background-color: #9b59b6;
+	background: linear-gradient(#593645, #9B5E77, #9B5E77, #C7A3B2);
+  	background-repeat:no-repeat;
 	font-family: 'Open Sans', sans-serif;
 	text-align: center;
 }
