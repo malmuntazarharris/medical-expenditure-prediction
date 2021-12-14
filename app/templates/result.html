@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Health Spending ML Model</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+</head>
+
+<body>
+ <div class="bg-info">
+     <h2>Results</h2>
+</div>
+<div class="result-box" style="width:800px; margin:0 auto;">
+    {{ prediction_text }}
+ </div>
+</body>
+</html>

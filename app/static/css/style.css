@@ -54,3 +54,12 @@ button {
 	margin-top: 20px;
 	width: 100%;
 }
+
+.result-box {
+	border: 1px solid black;
+	border-radius: 4px;
+	display: block;
+	background-color: white;
+	width: 50%;
+	margin:0 auto;
+}

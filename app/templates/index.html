@@ -14,23 +14,23 @@
 
       <div class="form-control">
         <label for="age"><b>Age:</b></label>
-        <input type="number" id="age" min="1" max="99">
+        <input type="number" id="age" name="age" min="1" max="99">
       </div>
 
       <div class="form-control">
         <label><b>Gender:</b></label>
         <label for="male">Male
-          <input type="radio" id="male" name="gender" value="1"/>
+          <input type="radio" id="male" name="sex" value="1"/>
         </label>
         <label for="female">Female
-          <input type="radio" id="female" name="gender" value="2">
+          <input type="radio" id="female" name="sex" value="2">
         </label>
       </div>
 
       <div class="form-control">
         <label><b>Ethinicity:</b></label>
         <label for="Hispanic">Hispanic
-          <input type="radio" id="hispanic" name="ethinicity" value="1">
+          <input type="radio" id="hispanic" name="ethnicity" value="1">
         </label>
         <label for="NotHispanic">Not Hispanic
           <input type="radio" id="nothispanic" name="ethnicity" value="2">
@@ -59,73 +59,73 @@
       <div class="form-control">
         <label><b>Do you speak another language at home?</b></label>
         <label for="speakotheryes">Yes
-          <input type="radio" id="speakotheryes" name="othlang" value="1">
+          <input type="radio" id="speakotheryes" name="other_language_spoken_at_home" value="1">
         </label>
         <label for="speakotherno">No
-          <input type="radio" id="speakotherno" name="othlang" value="2">
+          <input type="radio" id="speakotherno" name="other_language_spoken_at_home" value="2">
         </label>
       </div>
 
       <div class="form-control">
         <label><b>Were you born in the United States?</b></label>
         <label for="bornusano">Yes
-          <input type="radio" id="bornusano" name="bornusa" value="1">
+          <input type="radio" id="bornusano" name="born_in_usa" value="1">
         </label>
         <label for="bornusayes">No
-          <input type="radio" id="bornusayes" name="bornusa" value="2">
+          <input type="radio" id="bornusayes" name="born_in_usa" value="2">
         </label>
       </div>
       
       <div class="form-control">
         <label><b>What is your marital status?</b></label>
         <label>Married
-          <input type="radio" id="married" name="marriagestatus" value="1">
+          <input type="radio" id="married" name="marriage_status" value="1">
         </label>
         <label for="widowed">Widowed
-          <input type="radio" id="widowed" name="marriagestatus" value="2">
+          <input type="radio" id="widowed" name="marriage_status" value="2">
         </label>
         <label for="divorced">Divorced
-          <input type="radio" id="divorced" name="marriagestatus" value="3">
+          <input type="radio" id="divorced" name="marriage_status" value="3">
         </label>
         <label for="separated">Separated
-          <input type="radio" id="separated" name="marriagestatus" value="4">
+          <input type="radio" id="separated" name="marriage_status" value="4">
         </label>
         <label for="nevermarried">Never Married
-          <input type="radio" id="nevermarried" name="marriagestatus" value="5">
+          <input type="radio" id="nevermarried" name="marriage_status" value="5">
         </label>
         <label for="under16">N/A - Under 16
-          <input type="radio" id="under16" name="marriagestatus" value="6">
+          <input type="radio" id="under16" name="marriage_status" value="6">
         </label>
       </div>
       
       <div class="form-control">
         <label><b>Are you in the military full-time?</b></label>
         <label for="milyes">Yes
-          <input type="radio" id="milyes" name="military" value="1">
+          <input type="radio" id="milyes" name="military_status" value="1">
         </label>
         <label for="milno">No
-          <input type="radio" id="milno" name="military" value="2">
+          <input type="radio" id="milno" name="military_status" value="2">
         </label>
       </div>
 
       <div class="form-control">
         <label><b>What is your employment status?</b></label>
         <label for="employyes">Yes
-          <input type="radio" id="employyes" name="employment" value="1">
+          <input type="radio" id="employyes" name="employment_status" value="1">
         </label>
         <label for="employno">No
-          <input type="radio" id="employno" name="employment" value="34">
+          <input type="radio" id="employno" name="employment_status" value="34">
         </label>
       </div>
 
       <div class="form-control">
         <label><b>What is your approximate total income?</b></label>
-        <input type="number" id="totalincome">
+        <input type="number" name="total_income" id="total_income">
       </div>
 
       <div class="form-control">
         <label><b>What is your highest level of education?</b></label>
-        <select id="educationstatus" name="educationstatus">
+        <select id="educationstatus" name="highest_education">
           <option value="1" selected>No Degree</option>
           <option value="2">GED</option>
           <option value="3">High School Diploma</option>
@@ -139,7 +139,7 @@
       
       <div class="form-control">
         <label><b>What is your insurance status?</b></label>
-        <select id="insurancestatus" name="insurancestatus">
+        <select id="insurancestatus" name="insurance_status">
           <option value="1" selected>Under 65 - Any Private Insurance</option>
           <option value="2">Under 65 - Public Insurance</option>
           <option value="3">Under 65 - Uninsured</option>
@@ -169,7 +169,7 @@
           <li>Asthma</li>
           <li>ADHD/ADD</li>
         </ul>
-        <input type="number" id="numdiagnoses" name="numdiagnoses" min="0" max="14">
+        <input type="number" id="numdiagnoses" name="diag_amt" min="0" max="14">
       </div>
 
       <div class="form-control">
@@ -184,21 +184,19 @@
           <li>Difficulty reaching over head</li>
           <li>Difficulty grasping with fingers</li>
         </ul>
-        <input type="number" id="numdiff" name="numdiff" min="0" max="8">
+        <input type="number" id="numdiff" name="number_of_diff" min="0" max="8">
       </div>
     
       <div class="form-control">
         <label><b>How many health-related visits have you had?</b> <br>This includes: ER visits, office doctor visits, 
           dental visits, home health care days, surgery visits, or any kind of health-related visits.</label>
-        <input type="number" id="numdiff" name="numdiff" min="0" max="99">
+        <input type="number" id="numvis" name="number_of_visits" min="0" max="99">
       </div>
 
       <button type="submit" value="submit">
         Submit
     </button>
     </form>
-  <br>
-   <br>
    {{ prediction_text }}
 </body>
 </html>

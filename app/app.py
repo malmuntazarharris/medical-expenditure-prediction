@@ -4,33 +4,32 @@ ML Webapp example: https://github.com/krishnaik06/Deployment-flask/blob/master/a
 """
 
 from flask import Flask, render_template, request
+import pandas as pd
 import numpy as np
+import math
+import sklearn
 import pickle
 
 app = Flask(__name__)
-# model = pickle.load(open('C:/Users/Malcolm/Documents/MedicalExpenditure/xgboost/pkl_objects/xgboost_model.pickle', 'rb'))
+pipeline = pickle.load(open('../xgboost/pkl_objects/MEPS_xgb_model_pipeline_v2.pickle', 'rb'))
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def home():
     return render_template('index.html')
 
-@app.route('/predict',methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def predict():
-# test predict
+    form_values = np.array([int(x) for x in request.form.values()])
+    form_keys = list(request.form.keys())
 
-    features = list(request.form.values())
+    app.logger.info('The form values are the following: %s', form_values)
+    app.logger.info('The form keys are the following: %s', form_keys)
 
-    return render_template('index.html', prediction_text=str(features))
-#     '''
-#     Renders results in html
-#     '''
-#     int_features = [int(x) for x in request.form.values()]
-#     final_features = [np.array(int_features)]
-#     prediction = model.predict(final_features)
+    form_df = pd.DataFrame([form_values], columns = form_keys)
+    prediction = math.e ** (pipeline.predict(form_df)) # target value for the model was transform using log(x), this converts them to the original representation
+    pred_str = "${:,.2f}".format(float(prediction))
 
-#     output = round(prediction[0], 2)
-
-#     return render_template('index.html', prediction_text='Predicted Medical Expenditure per year is $ {}'.format(output))
+    return render_template('result.html', prediction_text='Predicted Medical Expenditure per year is {}'.format(pred_str))
 
 if __name__ == '__main__':
    app.run(debug=True)
