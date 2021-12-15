@@ -5,3 +5,5 @@ h216.xlsx
 h216v9.zip
 h216.dat
 feature_importance.ipynb
+.ipynb_checkpoints
+__pycache__
