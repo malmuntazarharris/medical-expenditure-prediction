@@ -14,7 +14,7 @@ app = Flask(__name__)
 pipeline = pickle.load(open('../xgboost/pkl_objects/MEPS_xgb_model_pipeline_v2.pickle', 'rb'))
 
 @app.route('/', methods=['GET'])
-def home():
+def homepage():
     return render_template('index.html')
 
 @app.route('/predict', methods=['POST'])
