@@ -20,13 +20,8 @@ def home():
 @app.route('/predict', methods=['POST'])
 def predict():
     form_values = np.array([int(x) for x in request.form.values()])
-    form_keys = list(request.form.keys())
-
-    app.logger.info('The form values are the following: %s', form_values)
-    app.logger.info('The form keys are the following: %s', form_keys)
-
-    form_df = pd.DataFrame([form_values], columns = form_keys)
-    prediction = math.e ** (pipeline.predict(form_df)) # target value for the model was transform using log(x), this converts them to the original representation
+    form_df = pd.DataFrame([form_values], columns = list(request.form.keys()))
+    prediction = math.e ** (pipeline.predict(form_df)) # target value for the model was transformed using log(x), this converts them to the original representation
     pred_str = "${:,.2f}".format(float(prediction))
 
     return render_template('result.html', prediction_text='Predicted Medical Expenditure per year is {}'.format(pred_str))
