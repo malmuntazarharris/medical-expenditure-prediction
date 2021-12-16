@@ -21,8 +21,14 @@ This project is a machine learning model deployed to a Flask web app that users 
 
 **Web Dev Tools**: HTML5, CSS, Heroku
 
-**Packages:** scikit-learn, pandas, numpy, pickle, matplotlib, seaborn, flask
+**Python Modules:** scikit-learn, pandas, numpy, pickle, matplotlib, seaborn, flask
 
-**Survey Data:** ![Medical Expenditure Panel Survey (MEPS) from Agency for Healthcare Research and Quality](https://www.meps.ahrq.gov/mepsweb/data_stats/download_data_files_detail.jsp?cboPufNumber=HC-216)
+**Survey Data:** https://www.meps.ahrq.gov/mepsweb/data_stats/download_data_files_detail.jsp?cboPufNumber=HC-216
+
+**ML Flask Example:** https://github.com/krishnaik06/Deployment-flask
+
+**Form Frontend Example:** https://www.geeksforgeeks.org/build-a-survey-form-using-html-and-css/
+
+**Flask Heroku Deployment Tutorial:** https://www.section.io/engineering-education/integrate-ml-to-flask-api-and-deploy-to-heroku/ 
 
 ## Data Cleaning and EDA
