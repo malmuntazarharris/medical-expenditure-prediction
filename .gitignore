@@ -7,6 +7,7 @@ h216.dat
 feature_importance.ipynb
 .ipynb_checkpoints
 __pycache__
+vir_env/
 vir_env/Lib/site-packages/_distutils_hack/__init__.py
 vir_env/Lib/site-packages/_distutils_hack/override.py
 vir_env/Lib/site-packages/click-8.0.3.dist-info/INSTALLER
