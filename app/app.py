@@ -11,7 +11,7 @@ import sklearn
 import pickle
 
 app = Flask(__name__)
-pipeline = pickle.load(open('../xgboost/pkl_objects/MEPS_xgb_model_pipeline_v2.pickle', 'rb'))
+pipeline = pickle.load(open('/xgboost/pkl_objects/MEPS_xgb_model_pipeline_v2.pickle', 'rb'))
 
 @app.route('/', methods=['GET'])
 def homepage():
