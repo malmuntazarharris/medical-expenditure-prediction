@@ -31,4 +31,16 @@ This project is a machine learning model deployed to a Flask web app that users 
 
 **Flask Heroku Deployment Tutorial:** https://www.section.io/engineering-education/integrate-ml-to-flask-api-and-deploy-to-heroku/ 
 
-## Data Cleaning and EDA
+## Data Cleaning
+
+[Data Cleaning Notebook](https://github.com/malmuntazarharris/medical-expenditure-prediction/blob/master/xgboost/datacleaning.ipynb)
+
+The original dataset has 1447 features so I reduced to 53 features by removing any features directly related to spending and selecting any features related to demographic, socioeconomic status or health status. The selected features were then renamed to be more descriptive.
+
+## EDA
+
+[Exploratory Data Analysis Notebook](https://github.com/malmuntazarharris/medical-expenditure-prediction/blob/master/xgboost/eda_feature_engineering.ipynb)
+
+From there
+
+
