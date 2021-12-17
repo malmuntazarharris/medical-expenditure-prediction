@@ -1,6 +1,6 @@
 """
 Resources: 
-ML Webapp example: https://github.com/krishnaik06/Deployment-flask/blob/master/app.py
+ML Webapp example: https://github.com/krishnaik06/Deployment-flask
 """
 
 from flask import Flask, render_template, request
