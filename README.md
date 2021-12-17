@@ -91,6 +91,8 @@ I wasn't satisfied with the model's performance and I thought it used an unwield
 
 In order to make a viable product with this project, I found several tutorials (referenced at the top) to help me put this model on a web server. I built a Flask backend and put together a form using HTML and CSS. With the website made, I deployed the project onto heroku where any user can use it. 
 
+https://medical-expenditure-prediction.herokuapp.com/
+
 ## Takeaways
 
 * In my initial planning phase for ML projects, I should keep in my the constraints I have. I had to limit the amount of features I used to trained my model due to the limitations of the web app and what I thought was appropriate to collect. It would have saved time if this was realized earlier on. However, this was good practice in case I ever find similar constraints in my future work.
