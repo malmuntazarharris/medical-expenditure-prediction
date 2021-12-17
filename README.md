@@ -17,6 +17,8 @@ This project is a machine learning model deployed to a Flask web app that users 
 * Built simple frontend with HTML and CSS
 * Deployed app on Heroku
 
+![Click here for my takeaways](https://github.com/malmuntazarharris/medical-expenditure-prediction/blob/master/README.md#takeaways)
+
 ## Code and Resources Used 
 **Python Version:** Python 3.9.7
 
