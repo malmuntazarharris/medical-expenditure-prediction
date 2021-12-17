@@ -1,4 +1,5 @@
 # Medical Expenditure Prediction Web App: Project Overview
+
 https://medical-expenditure-prediction.herokuapp.com/
 
 This project is a machine learning model deployed to a Flask web app that users can use to predict the amount of spending an individual will spend out-of-pocket on healthcare a year. The steps I followed for this project are as follows:
@@ -47,3 +48,18 @@ After data cleaning, I viewed the distributions of the data and produced several
 ![download](https://user-images.githubusercontent.com/29358953/146486051-3b057f74-88c5-4047-8a43-6a2055c124a6.png)
 ![download](https://user-images.githubusercontent.com/29358953/146486122-3db94dbb-fd7f-430f-99a7-109f7949b3a3.png)
 
+## Feature Engineering
+
+Utilizing the data for medical visits, medical condition diagnoses, and physical limitations, I featured engineered three additional columns.
+
+## Model Building: Initial Comparison
+
+I tested three different models and evaluated them using Mean Absolute Error. I chose MAE because it is relatively easy to interpret. Out of the three models I tried, XGBoost perfomed the best:
+
+| Model             | MAE                |
+|-------------------|--------------------|
+| Linear Regression | -4480.291433183665 |
+| Random Forest     | -4343.886650547299 |
+| XGBoost           | -4214.298763882473 |
+
+## Model Building: Initial Build
