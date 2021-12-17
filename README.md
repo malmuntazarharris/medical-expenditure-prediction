@@ -41,6 +41,9 @@ The original dataset has 1447 features so I reduced to 53 features by removing a
 
 [Exploratory Data Analysis Notebook](https://github.com/malmuntazarharris/medical-expenditure-prediction/blob/master/xgboost/eda_feature_engineering.ipynb)
 
-From there
+After data cleaning, I viewed the distributions of the data and produced several plots in order to gain some insight of the data.
 
+![download](https://user-images.githubusercontent.com/29358953/146485915-3e42495b-4064-4c2f-b1d8-887b94831342.png)
+![download](https://user-images.githubusercontent.com/29358953/146486051-3b057f74-88c5-4047-8a43-6a2055c124a6.png)
+![download](https://user-images.githubusercontent.com/29358953/146486122-3db94dbb-fd7f-430f-99a7-109f7949b3a3.png)
 
