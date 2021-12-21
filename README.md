@@ -96,6 +96,6 @@ https://medical-expenditure-prediction.herokuapp.com/
 ## Takeaways
 
 * In my initial planning phase for ML projects, I should keep in my the constraints I have. I had to limit the amount of features I used to trained my model due to the limitations of the web app and what I thought was appropriate to collect. It would have saved time if this was realized earlier on. However, this was good practice in case I ever find similar constraints in my future work.
-* I thoroughly enjoyed the process of putting together a website and deploy. It was satisfying putting together a final useable product and it makes me excited to learn more about web dev in the future
-* I learned several ways to make my models more accurate and further research into how each model's accuracy depends on how I preprocessing my data will be illuminating and will improve the quality of my future work.
+* I thoroughly enjoyed the process of putting together a website and deployment. It was satisfying putting together a final useable product and it makes me excited to learn more about web dev in the future
+* I learned several ways to make my models more accurate and further research into how each model's accuracy depends on how I'm preprocessing my data will be illuminating and will improve the quality of my future work.
 
